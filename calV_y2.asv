@@ -1,0 +1,10 @@
+function [ src ] = calV_y2( src, n , padding_factor)
+%CALV_Y2 Summary of this function goes here
+%   Detailed explanation goes here
+a = src(1+padding_factor,:)-src(2,:);
+b = src(n-1,:)-src(n,:);
+src(2:n-1,:) = 0;
+src(1,:) = a;
+src(n,:) = b;
+end
+
